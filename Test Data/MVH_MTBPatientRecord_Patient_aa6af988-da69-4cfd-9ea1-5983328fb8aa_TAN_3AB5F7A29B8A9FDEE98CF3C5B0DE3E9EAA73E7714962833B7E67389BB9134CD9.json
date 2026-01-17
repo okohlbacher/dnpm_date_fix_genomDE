@@ -1,0 +1,2730 @@
+{
+  "patient" : {
+    "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+    "gender" : {
+      "code" : "male",
+      "display" : "Männlich",
+      "system" : "Gender"
+    },
+    "birthDate" : "1981-02-13",
+    "dateOfDeath" : "2010-02-13",
+    "managingSite" : {
+      "code" : "UKx",
+      "display" : "Musterlingen",
+      "system" : "dnpm-dip/site"
+    },
+    "healthInsurance" : {
+      "type" : {
+        "code" : "GKV",
+        "display" : "gesetzliche Krankenversicherung",
+        "system" : "http://fhir.de/CodeSystem/versicherungsart-de-basis"
+      },
+      "reference" : {
+        "id" : "1234567890",
+        "system" : "https://www.dguv.de/arge-ik",
+        "display" : "AOK",
+        "type" : "HealthInsurance"
+      }
+    },
+    "address" : {
+      "municipalityCode" : "12345"
+    },
+    "age" : {
+      "value" : 29,
+      "unit" : "Years"
+    },
+    "vitalStatus" : {
+      "code" : "deceased",
+      "display" : "Verstorben",
+      "system" : "dnpm-dip/patient/vital-status"
+    }
+  },
+  "episodesOfCare" : [ {
+    "id" : "da321e2b-f05c-44d4-8f58-fdb867256130",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "period" : {
+      "start" : "2025-04-15"
+    },
+    "diagnoses" : [ {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "type" : "MTBDiagnosis"
+    } ]
+  } ],
+  "diagnoses" : [ {
+    "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "recordedOn" : "2007-06-13",
+    "type" : {
+      "history" : [ {
+        "value" : {
+          "code" : "main",
+          "display" : "Hauptdiagnose",
+          "system" : "dnpm-dip/mtb/diagnosis/type"
+        },
+        "date" : "2007-06-13"
+      } ]
+    },
+    "code" : {
+      "code" : "C67.2",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+      "version" : "2025"
+    },
+    "topography" : {
+      "code" : "C67.2",
+      "display" : "Laterale Harnblasenwand",
+      "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+      "version" : "Zweite Revision"
+    },
+    "grading" : {
+      "history" : [ {
+        "date" : "2007-06-13",
+        "codes" : [ {
+          "code" : "L",
+          "display" : "L = low grade (G1 oder G2)",
+          "system" : "https://www.basisdatensatz.de/feld/161/grading"
+        }, {
+          "code" : "3",
+          "display" : "Anaplastic astrocytoma",
+          "system" : "dnpm-dip/mtb/who-grading-cns-tumors",
+          "version" : "2021"
+        } ]
+      } ]
+    },
+    "staging" : {
+      "history" : [ {
+        "date" : "2007-06-13",
+        "method" : {
+          "code" : "clinical",
+          "display" : "Klinisch",
+          "system" : "dnpm-dip/mtb/tumor-staging/method"
+        },
+        "tnmClassification" : {
+          "tumor" : {
+            "code" : "T1",
+            "display" : "T1",
+            "system" : "UICC"
+          },
+          "nodes" : {
+            "code" : "N2",
+            "display" : "N2",
+            "system" : "UICC"
+          },
+          "metastasis" : {
+            "code" : "MX",
+            "display" : "MX",
+            "system" : "UICC"
+          }
+        },
+        "otherClassifications" : [ {
+          "code" : "metastasized",
+          "display" : "Metastasiert",
+          "system" : "dnpm-dip/mtb/diagnosis/kds-tumor-spread"
+        } ]
+      } ]
+    },
+    "guidelineTreatmentStatus" : {
+      "code" : "exhausted",
+      "display" : "Leitlinien ausgeschöpft",
+      "system" : "dnpm-dip/mtb/diagnosis/guideline-treatment-status"
+    },
+    "histology" : [ {
+      "id" : "f1a0d596-9711-4a7e-ae65-b97f9c8f1355",
+      "type" : "HistologyReport"
+    } ],
+    "notes" : [ "Notes on the tumor diagnosis..." ]
+  } ],
+  "familyMemberHistories" : [ {
+    "id" : "b80ab08c-afaf-4f63-a914-e4128b84b8d8",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "relationship" : {
+      "code" : "EXT",
+      "display" : "Verwandter weiteren Grades",
+      "system" : "dnpm-dip/mtb/family-meber-history/relationship-type"
+    }
+  } ],
+  "guidelineTherapies" : [ {
+    "id" : "9b148d20-6ca9-4308-9d9b-f5a5e56f50eb",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "reason" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "type" : "MTBDiagnosis"
+    },
+    "therapyLine" : 5,
+    "intent" : {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "system" : "dnpm-dip/therapy/intent"
+    },
+    "category" : {
+      "code" : "I",
+      "display" : "Intraopterativ",
+      "system" : "dnpm-dip/therapy/category"
+    },
+    "recordedOn" : "2025-10-15",
+    "status" : {
+      "code" : "stopped",
+      "display" : "Abgebrochen",
+      "system" : "dnpm-dip/therapy/status"
+    },
+    "statusReason" : {
+      "code" : "progression",
+      "display" : "Progression",
+      "system" : "dnpm-dip/therapy/status-reason"
+    },
+    "period" : {
+      "start" : "2024-06-15",
+      "end" : "2024-08-31"
+    },
+    "medication" : [ {
+      "code" : "L01EX08",
+      "display" : "Lenvatinib",
+      "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+      "version" : "2025"
+    } ],
+    "notes" : [ "Notes on the therapy..." ]
+  } ],
+  "guidelineProcedures" : [ {
+    "id" : "f91b2209-48df-4242-a3d2-944c38e22b04",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "reason" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "type" : "MTBDiagnosis"
+    },
+    "therapyLine" : 2,
+    "intent" : {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "system" : "dnpm-dip/therapy/intent"
+    },
+    "code" : {
+      "code" : "nuclear-medicine",
+      "display" : "Nuklearmedizinische Therapie",
+      "system" : "dnpm-dip/mtb/procedure/type"
+    },
+    "status" : {
+      "code" : "completed",
+      "display" : "Abgeschlossen",
+      "system" : "dnpm-dip/therapy/status"
+    },
+    "statusReason" : {
+      "code" : "patient-refusal",
+      "display" : "Therapie durch Patient abgelehnt",
+      "system" : "dnpm-dip/therapy/status-reason"
+    },
+    "recordedOn" : "2025-10-15",
+    "period" : {
+      "start" : "2025-04-15"
+    },
+    "notes" : [ "Notes on the therapeutic procedure..." ]
+  }, {
+    "id" : "f1b927f9-6cdb-4014-a7af-aa3eadd883b4",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "reason" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "type" : "MTBDiagnosis"
+    },
+    "therapyLine" : 1,
+    "intent" : {
+      "code" : "S",
+      "display" : "Sonstiges",
+      "system" : "dnpm-dip/therapy/intent"
+    },
+    "code" : {
+      "code" : "surgery",
+      "display" : "OP",
+      "system" : "dnpm-dip/mtb/procedure/type"
+    },
+    "status" : {
+      "code" : "stopped",
+      "display" : "Abgebrochen",
+      "system" : "dnpm-dip/therapy/status"
+    },
+    "statusReason" : {
+      "code" : "lost-to-fu",
+      "display" : "Lost to follow-up",
+      "system" : "dnpm-dip/therapy/status-reason"
+    },
+    "recordedOn" : "2025-10-15",
+    "period" : {
+      "start" : "2025-04-15"
+    },
+    "notes" : [ "Notes on the therapeutic procedure..." ]
+  } ],
+  "performanceStatus" : [ {
+    "id" : "725ea840-eaca-4afd-80ab-bc383bb1b4d9",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "effectiveDate" : "2025-10-15",
+    "value" : {
+      "code" : "5",
+      "display" : "ECOG 5",
+      "system" : "ECOG-Performance-Status"
+    }
+  } ],
+  "specimens" : [ {
+    "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "diagnosis" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "type" : "MTBDiagnosis"
+    },
+    "type" : {
+      "code" : "liquid-biopsy",
+      "display" : "Liquid Biopsy",
+      "system" : "dnpm-dip/mtb/tumor-specimen/type"
+    },
+    "collection" : {
+      "date" : "2025-10-15",
+      "method" : {
+        "code" : "resection",
+        "display" : "Resektat",
+        "system" : "dnpm-dip/mtb/tumor-specimen/collection/method"
+      },
+      "localization" : {
+        "code" : "local-recurrence",
+        "display" : "Lokalrezidiv",
+        "system" : "dnpm-dip/mtb/tumor-specimen/collection/localization"
+      }
+    }
+  } ],
+  "priorDiagnosticReports" : [ {
+    "id" : "d918d92c-e335-4649-b0d8-2f8ebbf09a9e",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "performer" : {
+      "id" : "xyz",
+      "display" : "Molekular-Pathologie UKx",
+      "type" : "Institute"
+    },
+    "issuedOn" : "2025-10-15",
+    "specimen" : {
+      "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+      "type" : "TumorSpecimen"
+    },
+    "type" : {
+      "code" : "PCR",
+      "display" : "PCR",
+      "system" : "dnpm-dip/mtb/molecular-diagnostics/type"
+    },
+    "results" : [ "Result of diagnostics..." ]
+  } ],
+  "histologyReports" : [ {
+    "id" : "f1a0d596-9711-4a7e-ae65-b97f9c8f1355",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "specimen" : {
+      "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+      "type" : "TumorSpecimen"
+    },
+    "issuedOn" : "2025-10-15",
+    "results" : {
+      "tumorMorphology" : {
+        "id" : "da381675-bdd7-4c33-bb0c-6d477b866f26",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "value" : {
+          "code" : "8895/0",
+          "display" : "Myom",
+          "system" : "urn:oid:2.16.840.1.113883.6.43.1",
+          "version" : "Zweite Revision"
+        },
+        "note" : "Notes..."
+      },
+      "tumorCellContent" : {
+        "id" : "1729d76d-63e1-4cfb-a0b6-15cce5ffea29",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "method" : {
+          "code" : "histologic",
+          "display" : "Histologisch",
+          "system" : "dnpm-dip/mtb/tumor-cell-content/method"
+        },
+        "value" : 0.6029752938841684
+      }
+    }
+  } ],
+  "ihcReports" : [ {
+    "id" : "572f4e05-abed-4655-94d9-a60087d929f2",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "specimen" : {
+      "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+      "type" : "TumorSpecimen"
+    },
+    "issuedOn" : "2025-10-15",
+    "results" : {
+      "proteinExpression" : [ {
+        "id" : "0352c286-d656-4b95-bdf9-6be5be2ae8a3",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "protein" : {
+          "code" : "HGNC:11998",
+          "display" : "TP53",
+          "system" : "https://www.genenames.org/"
+        },
+        "value" : {
+          "code" : "2+",
+          "display" : "2+",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/result"
+        },
+        "tpsScore" : 14,
+        "cpsScore" : 48,
+        "icScore" : {
+          "code" : "1",
+          "display" : ">= 1%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/ic-score"
+        },
+        "tcScore" : {
+          "code" : "4",
+          "display" : ">= 25%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/tc-score"
+        }
+      }, {
+        "id" : "c9cb9dc4-d59a-4dbd-95f4-eb58bbc91a83",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "protein" : {
+          "code" : "HGNC:11998",
+          "display" : "TP53",
+          "system" : "https://www.genenames.org/"
+        },
+        "value" : {
+          "code" : "3+",
+          "display" : "3+",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/result"
+        },
+        "tpsScore" : 30,
+        "cpsScore" : 4,
+        "icScore" : {
+          "code" : "2",
+          "display" : ">= 5%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/ic-score"
+        },
+        "tcScore" : {
+          "code" : "5",
+          "display" : ">= 50%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/tc-score"
+        }
+      }, {
+        "id" : "6177cafb-a192-47b2-8434-83813a09180f",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "protein" : {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        },
+        "value" : {
+          "code" : "2+",
+          "display" : "2+",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/result"
+        },
+        "tpsScore" : 67,
+        "cpsScore" : 61,
+        "icScore" : {
+          "code" : "2",
+          "display" : ">= 5%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/ic-score"
+        },
+        "tcScore" : {
+          "code" : "0",
+          "display" : "< 1%",
+          "system" : "dnpm-dip/mtb/ihc/protein-expression/tc-score"
+        }
+      } ],
+      "msiMmr" : [ ]
+    }
+  } ],
+  "msiFindings" : [ {
+    "id" : "3e29449c-79c2-462b-b23d-d062532f520f",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "specimen" : {
+      "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+      "type" : "TumorSpecimen"
+    },
+    "method" : {
+      "code" : "PCR",
+      "display" : "PCR",
+      "system" : "dnpm-dip/mtb/msi/method"
+    },
+    "value" : 1.5242700734254093,
+    "interpretation" : {
+      "code" : "stable",
+      "display" : "MSS",
+      "system" : "dnpm-dip/mtb/msi/interpretation"
+    }
+  } ],
+  "ngsReports" : [ {
+    "id" : "949215d6-4a6b-4c9c-a19d-9fdcb0df0cd4",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "specimen" : {
+      "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+      "type" : "TumorSpecimen"
+    },
+    "issuedOn" : "2025-10-15",
+    "type" : {
+      "code" : "genome-short-read",
+      "display" : "Genome short-read",
+      "system" : "dnpm-dip/ngs/type"
+    },
+    "metadata" : [ {
+      "kitType" : "Kit Type",
+      "kitManufacturer" : "Manufacturer",
+      "sequencer" : "Sequencer",
+      "referenceGenome" : "GRCh37",
+      "pipeline" : "https://github.com/pipeline-project"
+    } ],
+    "results" : {
+      "tumorCellContent" : {
+        "id" : "a6896ed3-7c59-4923-b3a3-ef909bbb6351",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "method" : {
+          "code" : "bioinformatic",
+          "display" : "Bioinformatisch",
+          "system" : "dnpm-dip/mtb/tumor-cell-content/method"
+        },
+        "value" : 0.0501684746276595
+      },
+      "tmb" : {
+        "id" : "bc4b058a-df79-47cb-884f-60b4df8f352f",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "value" : {
+          "value" : 499628,
+          "unit" : "Mutations per megabase"
+        },
+        "interpretation" : {
+          "code" : "low",
+          "display" : "Niedrig",
+          "system" : "dnpm-dip/mtb/ngs/tmb/interpretation"
+        }
+      },
+      "brcaness" : {
+        "id" : "4bd753a6-f07d-402b-b3be-57b049a14938",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "value" : 0.5,
+        "confidenceRange" : {
+          "min" : 0.4,
+          "max" : 0.6
+        }
+      },
+      "hrdScore" : {
+        "id" : "aec3d9e8-8ae9-4c2a-813c-1a339e8b176f",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "specimen" : {
+          "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+          "type" : "TumorSpecimen"
+        },
+        "value" : 0.2792530203235919,
+        "components" : {
+          "lst" : 0.2182874313112425,
+          "loh" : 0.023310256717836375,
+          "tai" : 0.5218054333359388
+        },
+        "interpretation" : {
+          "code" : "low",
+          "display" : "Niedrig",
+          "system" : "dnpm-dip/mtb/ngs/hrd-score/interpretation"
+        }
+      },
+      "simpleVariants" : [ {
+        "id" : "0fafac7f-5117-46b5-9d6a-129b320206ee",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "a1046b24-43b0-48fa-a2f3-dd23a3de1766",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "a0e0d6a8-8f21-44fd-b5ca-1a8ab8826cc1",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr10",
+        "gene" : {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "intronic",
+          "display" : "Intronic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "3b1e96c3-dc19-4a0c-aeb7-9218b0597651",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "4",
+        "position" : {
+          "start" : 192
+        },
+        "altAllele" : "T",
+        "refAllele" : "G",
+        "dnaChange" : "c.192G>T",
+        "proteinChange" : "p.His4_Gln5insAla",
+        "readDepth" : 9,
+        "allelicFrequency" : 0.040164661769117926,
+        "interpretation" : {
+          "code" : "1",
+          "display" : "Benign",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "cd2fb8f7-cffb-406b-8eaf-eaae09703629",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "0e98ba6b-6c5f-4ad2-af91-aa8637c978a3",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "ed1bf724-54ac-490f-b09d-f607d8dbb7db",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr12",
+        "gene" : {
+          "code" : "HGNC:9967",
+          "display" : "RET",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "regulatory-region",
+          "display" : "Regulatory region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "f9527a34-e20c-4b0e-a043-6f23aeb47437",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "3",
+        "position" : {
+          "start" : 57
+        },
+        "altAllele" : "T",
+        "refAllele" : "G",
+        "dnaChange" : "c.57G>T",
+        "proteinChange" : "p.Trp24=/Cys",
+        "readDepth" : 19,
+        "allelicFrequency" : 0.07045321912546654,
+        "interpretation" : {
+          "code" : "1",
+          "display" : "Benign",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "65640714-7d34-410c-a357-001c109d4a0e",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "b871122a-9b98-4941-9c57-12f3be919ea7",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "ae46f675-9a97-49bd-8256-6502d084b1ad",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chrMT",
+        "gene" : {
+          "code" : "HGNC:1100",
+          "display" : "BRCA1",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "181b85de-3dde-4096-bd6c-e2b19e214e9e",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "5",
+        "position" : {
+          "start" : 60
+        },
+        "altAllele" : "C",
+        "refAllele" : "A",
+        "dnaChange" : "c.60A>C",
+        "proteinChange" : "p.(Glu125_Ala132delinsGlyLeuHisArgPheIleValLeu)",
+        "readDepth" : 8,
+        "allelicFrequency" : 0.012519717426319965,
+        "interpretation" : {
+          "code" : "1",
+          "display" : "Benign",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "d50fd701-a3ab-4e2b-9fd3-ec87a8dfb0bb",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "b4ab81ce-3ac8-45c9-990a-15e03bc5854f",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "9c7441e1-788a-49ab-9cc6-a236011766c1",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr20",
+        "gene" : {
+          "code" : "HGNC:18615",
+          "display" : "BRAFP1",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "splicing-region",
+          "display" : "splicing region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "92ebf567-95ee-419d-b834-cf0b275951d0",
+          "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+        },
+        "exonId" : "7",
+        "position" : {
+          "start" : 401
+        },
+        "altAllele" : "A",
+        "refAllele" : "C",
+        "dnaChange" : "c.401C>A",
+        "proteinChange" : "p.Gly2_Met46del",
+        "readDepth" : 23,
+        "allelicFrequency" : 0.8346409347134319,
+        "interpretation" : {
+          "code" : "5",
+          "display" : "Pathogenic",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "157337e7-00fa-4a15-8656-c7680c14f4bc",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "5ae6c810-c6aa-4de4-bdd6-be72a06b1f0a",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "0593de3c-6c1e-43d0-bfec-42ccfc43cc96",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr8",
+        "gene" : {
+          "code" : "HGNC:1777",
+          "display" : "CDK6",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "regulatory-region",
+          "display" : "Regulatory region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "e44e84cf-8ca4-4e87-a902-f19dfd550153",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "4",
+        "position" : {
+          "start" : 70
+        },
+        "altAllele" : "A",
+        "refAllele" : "T",
+        "dnaChange" : "c.70T>A",
+        "proteinChange" : "p.Lys2_Gly3insGlnSerLys",
+        "readDepth" : 15,
+        "allelicFrequency" : 0.5191117549047224,
+        "interpretation" : {
+          "code" : "5",
+          "display" : "Pathogenic",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "10a4a6b2-096e-4e9e-8dc5-c6d5a74ff40b",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "ffb12cac-b822-4f51-af6d-3fc2a44cc0c3",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "30dd5a26-ccc2-48aa-a0d5-f27e15dbe4ba",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr15",
+        "gene" : {
+          "code" : "HGNC:11998",
+          "display" : "TP53",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "b2f6a37b-1ac3-407f-82b8-fe9c9de90caa",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "9",
+        "position" : {
+          "start" : 433
+        },
+        "altAllele" : "T",
+        "refAllele" : "C",
+        "dnaChange" : "c.433C>T",
+        "proteinChange" : "p.Lys23_Val25del",
+        "readDepth" : 13,
+        "allelicFrequency" : 0.7142005316267396,
+        "interpretation" : {
+          "code" : "5",
+          "display" : "Pathogenic",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "be67fd10-4ebc-4889-8ffb-47ed8eab6f98",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "678ba6bb-9e5e-4bf2-8ad3-9efca302ca95",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "5723b4aa-fb2c-423a-8ea7-d987afae262f",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr7",
+        "gene" : {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "intergenic",
+          "display" : "Intergenic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "5304c750-00df-4c0a-9809-4c43ba97ec52",
+          "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+        },
+        "exonId" : "2",
+        "position" : {
+          "start" : 537
+        },
+        "altAllele" : "G",
+        "refAllele" : "C",
+        "dnaChange" : "c.537C>G",
+        "proteinChange" : "p.Lys23_Val25del",
+        "readDepth" : 21,
+        "allelicFrequency" : 0.9292758286713959,
+        "interpretation" : {
+          "code" : "3",
+          "display" : "Uncertain significance",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "b0ab9f88-0eeb-4aee-a630-6a6008a2114d",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "a64a2a8e-2eed-48f3-a058-54e113dfc9fa",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "2132af75-263f-408e-a8dc-8bf5466adc16",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr22",
+        "gene" : {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "splicing-region",
+          "display" : "splicing region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "3ab5ae5b-6eee-4efc-b7fb-146d1a705a34",
+          "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+        },
+        "exonId" : "3",
+        "position" : {
+          "start" : 173
+        },
+        "altAllele" : "G",
+        "refAllele" : "T",
+        "dnaChange" : "c.173T>G",
+        "proteinChange" : "p.Gly2_Met46del",
+        "readDepth" : 7,
+        "allelicFrequency" : 0.14682210657587935,
+        "interpretation" : {
+          "code" : "1",
+          "display" : "Benign",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      }, {
+        "id" : "71e38a9b-0639-420e-9163-5827b5ee144b",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "765671fd-f768-4522-ae33-42f52a23eaf0",
+          "system" : "https://www.ncbi.nlm.nih.gov/snp"
+        }, {
+          "value" : "c5e8937a-d84a-453a-94b3-719a3dd34a7d",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "chromosome" : "chr14",
+        "gene" : {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        },
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "transcriptId" : {
+          "value" : "8c4a0526-6cee-468c-82fb-a8b4675c8266",
+          "system" : "https://www.ensembl.org"
+        },
+        "exonId" : "5",
+        "position" : {
+          "start" : 52
+        },
+        "altAllele" : "A",
+        "refAllele" : "T",
+        "dnaChange" : "c.52T>A",
+        "proteinChange" : "p.Arg78_Gly79insX[23]",
+        "readDepth" : 18,
+        "allelicFrequency" : 0.25723420423878574,
+        "interpretation" : {
+          "code" : "5",
+          "display" : "Pathogenic",
+          "system" : "https://www.ncbi.nlm.nih.gov/clinvar"
+        }
+      } ],
+      "copyNumberVariants" : [ {
+        "id" : "cd38de25-9fcb-455c-9d97-5eb1fab58d20",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chrMT",
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 4103,
+          "end" : 4145
+        },
+        "endRange" : {
+          "start" : 4355,
+          "end" : 4405
+        },
+        "totalCopyNumber" : 3,
+        "relativeCopyNumber" : 0.35105809751457373,
+        "cnA" : 0.5336159160712555,
+        "cnB" : 0.13268505425228105,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:5173",
+          "display" : "HRAS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:76",
+          "display" : "ABL1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:886",
+          "display" : "ATRX",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1753",
+          "display" : "CDH13",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25662",
+          "display" : "AAGAB",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:9967",
+          "display" : "RET",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21298",
+          "display" : "AACS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3689",
+          "display" : "FGFR2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:34",
+          "display" : "ABCA4",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "low-level-gain",
+          "display" : "Low-level-gain",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25662",
+          "display" : "AAGAB",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1100",
+          "display" : "BRCA1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21298",
+          "display" : "AACS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3689",
+          "display" : "FGFR2",
+          "system" : "https://www.genenames.org/"
+        } ]
+      }, {
+        "id" : "497308e0-f31f-4d5f-ab19-6c5a5d46256f",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chr22",
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 11391,
+          "end" : 11433
+        },
+        "endRange" : {
+          "start" : 12347,
+          "end" : 12397
+        },
+        "totalCopyNumber" : 5,
+        "relativeCopyNumber" : 0.7125000507118033,
+        "cnA" : 0.21974217738584878,
+        "cnB" : 0.9130778269815347,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:6973",
+          "display" : "MDM2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1753",
+          "display" : "CDH13",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:34",
+          "display" : "ABCA4",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:18615",
+          "display" : "BRAFP1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6407",
+          "display" : "KRAS",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "high-level-gain",
+          "display" : "High-level-gain",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:25829",
+          "display" : "ABRAXAS1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:886",
+          "display" : "ATRX",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1777",
+          "display" : "CDK6",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3689",
+          "display" : "FGFR2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:34",
+          "display" : "ABCA4",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:18615",
+          "display" : "BRAFP1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6407",
+          "display" : "KRAS",
+          "system" : "https://www.genenames.org/"
+        } ]
+      }, {
+        "id" : "110b748f-997f-4930-9405-6bd5f8e9fb7c",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chr6",
+        "localization" : [ {
+          "code" : "splicing-region",
+          "display" : "splicing region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 24051,
+          "end" : 24093
+        },
+        "endRange" : {
+          "start" : 25034,
+          "end" : 25084
+        },
+        "totalCopyNumber" : 5,
+        "relativeCopyNumber" : 0.6735234442517033,
+        "cnA" : 0.16364400969941428,
+        "cnB" : 0.3926253140680026,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:5173",
+          "display" : "HRAS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1777",
+          "display" : "CDK6",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:9967",
+          "display" : "RET",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "high-level-gain",
+          "display" : "High-level-gain",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:76",
+          "display" : "ABL1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:34",
+          "display" : "ABCA4",
+          "system" : "https://www.genenames.org/"
+        } ]
+      }, {
+        "id" : "f63d2cbb-c151-4cc6-a3aa-3f782d700ac2",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chr5",
+        "localization" : [ {
+          "code" : "intronic",
+          "display" : "Intronic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 7280,
+          "end" : 7322
+        },
+        "endRange" : {
+          "start" : 7521,
+          "end" : 7571
+        },
+        "totalCopyNumber" : 1,
+        "relativeCopyNumber" : 0.36283388358623714,
+        "cnA" : 0.2651539935352837,
+        "cnB" : 0.6378152815317486,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25829",
+          "display" : "ABRAXAS1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6973",
+          "display" : "MDM2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1100",
+          "display" : "BRCA1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:886",
+          "display" : "ATRX",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3689",
+          "display" : "FGFR2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "loss",
+          "display" : "Loss",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:5173",
+          "display" : "HRAS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1753",
+          "display" : "CDH13",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25662",
+          "display" : "AAGAB",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21298",
+          "display" : "AACS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3689",
+          "display" : "FGFR2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:34",
+          "display" : "ABCA4",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:18615",
+          "display" : "BRAFP1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6407",
+          "display" : "KRAS",
+          "system" : "https://www.genenames.org/"
+        } ]
+      }, {
+        "id" : "dd445eb3-f202-45ab-bac3-4a2ffef78fac",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chr16",
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 44374,
+          "end" : 44416
+        },
+        "endRange" : {
+          "start" : 44632,
+          "end" : 44682
+        },
+        "totalCopyNumber" : 7,
+        "relativeCopyNumber" : 0.4663998029586074,
+        "cnA" : 0.9855792497284951,
+        "cnB" : 0.37871598154047215,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:18615",
+          "display" : "BRAFP1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:9967",
+          "display" : "RET",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21298",
+          "display" : "AACS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "high-level-gain",
+          "display" : "High-level-gain",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:1100",
+          "display" : "BRCA1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:76",
+          "display" : "ABL1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6407",
+          "display" : "KRAS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        } ]
+      }, {
+        "id" : "d20e6ba2-c5ba-4539-a411-363da489ac9a",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "chromosome" : "chr10",
+        "localization" : [ {
+          "code" : "regulatory-region",
+          "display" : "Regulatory region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "startRange" : {
+          "start" : 15965,
+          "end" : 16007
+        },
+        "endRange" : {
+          "start" : 16075,
+          "end" : 16125
+        },
+        "totalCopyNumber" : 7,
+        "relativeCopyNumber" : 0.5728993512888667,
+        "cnA" : 0.596477097220257,
+        "cnB" : 0.43714884149845123,
+        "reportedAffectedGenes" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25829",
+          "display" : "ABRAXAS1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6973",
+          "display" : "MDM2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1097",
+          "display" : "BRAF",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:76",
+          "display" : "ABL1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:886",
+          "display" : "ATRX",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3236",
+          "display" : "EGFR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6407",
+          "display" : "KRAS",
+          "system" : "https://www.genenames.org/"
+        } ],
+        "reportedFocality" : "partial q-arm",
+        "type" : {
+          "code" : "high-level-gain",
+          "display" : "High-level-gain",
+          "system" : "dnpm-dip/mtb/ngs-report/cnv/type"
+        },
+        "copyNumberNeutralLoH" : [ {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:11998",
+          "display" : "TP53",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:5173",
+          "display" : "HRAS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25829",
+          "display" : "ABRAXAS1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:6973",
+          "display" : "MDM2",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:25662",
+          "display" : "AAGAB",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:391",
+          "display" : "AKT1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:76",
+          "display" : "ABL1",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1777",
+          "display" : "CDK6",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:21298",
+          "display" : "AACS",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3942",
+          "display" : "MTOR",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:1753",
+          "display" : "CDH13",
+          "system" : "https://www.genenames.org/"
+        }, {
+          "code" : "HGNC:3690",
+          "display" : "FGFR3",
+          "system" : "https://www.genenames.org/"
+        } ]
+      } ],
+      "dnaFusions" : [ {
+        "id" : "f505c588-ec2e-4518-9ca2-6d9577ea443b",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "intronic",
+          "display" : "Intronic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr21",
+          "gene" : {
+            "code" : "HGNC:9967",
+            "display" : "RET",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 99
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr1",
+          "gene" : {
+            "code" : "HGNC:33",
+            "display" : "ABCA3",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 594
+        },
+        "reportedNumReads" : 4
+      }, {
+        "id" : "617ffbe6-cd26-4123-a674-90e3fef9804d",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "splicing-region",
+          "display" : "splicing region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr10",
+          "gene" : {
+            "code" : "HGNC:3690",
+            "display" : "FGFR3",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 585
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr18",
+          "gene" : {
+            "code" : "HGNC:25662",
+            "display" : "AAGAB",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 62
+        },
+        "reportedNumReads" : 9
+      }, {
+        "id" : "353e8fb8-2fbb-4043-9eac-ec4967b3d23a",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "intergenic",
+          "display" : "Intergenic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr6",
+          "gene" : {
+            "code" : "HGNC:6973",
+            "display" : "MDM2",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 187
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr15",
+          "gene" : {
+            "code" : "HGNC:25829",
+            "display" : "ABRAXAS1",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 466
+        },
+        "reportedNumReads" : 4
+      }, {
+        "id" : "9debf4c9-830b-4e03-80f5-9c07eb452202",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "intergenic",
+          "display" : "Intergenic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr14",
+          "gene" : {
+            "code" : "HGNC:5173",
+            "display" : "HRAS",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 890
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr11",
+          "gene" : {
+            "code" : "HGNC:25662",
+            "display" : "AAGAB",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 364
+        },
+        "reportedNumReads" : 8
+      }, {
+        "id" : "18102e5a-ee34-4ccd-aecb-05b329c7e051",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "regulatory-region",
+          "display" : "Regulatory region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr13",
+          "gene" : {
+            "code" : "HGNC:6407",
+            "display" : "KRAS",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 678
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr6",
+          "gene" : {
+            "code" : "HGNC:3690",
+            "display" : "FGFR3",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 899
+        },
+        "reportedNumReads" : 4
+      }, {
+        "id" : "bfdcb9ad-ac72-4221-a5ed-eb51644714b7",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "localization" : [ {
+          "code" : "intronic",
+          "display" : "Intronic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "chromosome" : "chr8",
+          "gene" : {
+            "code" : "HGNC:34",
+            "display" : "ABCA4",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 356
+        },
+        "fusionPartner3prime" : {
+          "chromosome" : "chr20",
+          "gene" : {
+            "code" : "HGNC:391",
+            "display" : "AKT1",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 663
+        },
+        "reportedNumReads" : 5
+      } ],
+      "rnaFusions" : [ {
+        "id" : "8bb0d597-f0d8-4e14-955a-53c305bd98f0",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "4c4d724c-e683-4d4b-963c-4b11081116fe",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "localization" : [ {
+          "code" : "intronic",
+          "display" : "Intronic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "transcriptId" : {
+            "value" : "2182e336-8a84-435b-ab3c-a8c96e9ec131",
+            "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+          },
+          "exonId" : "8",
+          "gene" : {
+            "code" : "HGNC:1097",
+            "display" : "BRAF",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 392,
+          "strand" : "-"
+        },
+        "fusionPartner3prime" : {
+          "transcriptId" : {
+            "value" : "448edc71-5658-44f8-b4d4-a957118f93cc",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "8",
+          "gene" : {
+            "code" : "HGNC:3236",
+            "display" : "EGFR",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 973,
+          "strand" : "+"
+        },
+        "effect" : "Effect",
+        "reportedNumReads" : 4
+      }, {
+        "id" : "d1b07c2e-6575-47da-9f39-af78da99128f",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "55e421cc-5477-4a14-866b-31a5bfacb81e",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "transcriptId" : {
+            "value" : "692c5235-a25e-4421-8ae6-fc5905559ead",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "2",
+          "gene" : {
+            "code" : "HGNC:33",
+            "display" : "ABCA3",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 342,
+          "strand" : "-"
+        },
+        "fusionPartner3prime" : {
+          "transcriptId" : {
+            "value" : "7bd79caf-ad2a-4c6d-a141-cca495a3e83a",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "5",
+          "gene" : {
+            "code" : "HGNC:3236",
+            "display" : "EGFR",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 909,
+          "strand" : "-"
+        },
+        "effect" : "Effect",
+        "reportedNumReads" : 5
+      }, {
+        "id" : "eb23ff7c-fa13-40ce-9f35-579835517d85",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "4ca4a5e0-d573-4de8-a180-dc7b2fa97f90",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "localization" : [ {
+          "code" : "intergenic",
+          "display" : "Intergenic",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "transcriptId" : {
+            "value" : "d6e97d66-b083-4ac1-8a62-3ec48eec01b2",
+            "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+          },
+          "exonId" : "11",
+          "gene" : {
+            "code" : "HGNC:18615",
+            "display" : "BRAFP1",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 720,
+          "strand" : "-"
+        },
+        "fusionPartner3prime" : {
+          "transcriptId" : {
+            "value" : "df330401-90e9-4554-a60f-6b8827a52a3a",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "8",
+          "gene" : {
+            "code" : "HGNC:1753",
+            "display" : "CDH13",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 973,
+          "strand" : "+"
+        },
+        "effect" : "Effect",
+        "reportedNumReads" : 6
+      }, {
+        "id" : "fbc13013-fda1-4951-813f-97b9f5648715",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "9cf421f6-ecbb-4916-b677-bb0454730df2",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "localization" : [ {
+          "code" : "regulatory-region",
+          "display" : "Regulatory region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "transcriptId" : {
+            "value" : "14cd7980-8c43-41a3-bb15-4d4196e5a107",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "3",
+          "gene" : {
+            "code" : "HGNC:3690",
+            "display" : "FGFR3",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 498,
+          "strand" : "-"
+        },
+        "fusionPartner3prime" : {
+          "transcriptId" : {
+            "value" : "a7602bcd-dff0-45e4-97a7-17de816572f7",
+            "system" : "https://www.ncbi.nlm.nih.gov/refseq"
+          },
+          "exonId" : "3",
+          "gene" : {
+            "code" : "HGNC:9967",
+            "display" : "RET",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 440,
+          "strand" : "+"
+        },
+        "effect" : "Effect",
+        "reportedNumReads" : 4
+      }, {
+        "id" : "2b18b3d5-8f28-49f8-9b5b-5e258893a42d",
+        "patient" : {
+          "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+          "type" : "Patient"
+        },
+        "externalIds" : [ {
+          "value" : "680196e5-c15f-487d-aa7f-2e9382c51945",
+          "system" : "https://cancer.sanger.ac.uk/cosmic"
+        } ],
+        "localization" : [ {
+          "code" : "coding-region",
+          "display" : "Coding region",
+          "system" : "dnpm-dip/variant/localization"
+        } ],
+        "fusionPartner5prime" : {
+          "transcriptId" : {
+            "value" : "d4bd23a0-4d11-43fc-96e9-aed34981c097",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "9",
+          "gene" : {
+            "code" : "HGNC:3689",
+            "display" : "FGFR2",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 59,
+          "strand" : "+"
+        },
+        "fusionPartner3prime" : {
+          "transcriptId" : {
+            "value" : "d00537e4-8d22-4fe0-bb87-19a69131df6d",
+            "system" : "https://www.ensembl.org"
+          },
+          "exonId" : "7",
+          "gene" : {
+            "code" : "HGNC:25829",
+            "display" : "ABRAXAS1",
+            "system" : "https://www.genenames.org/"
+          },
+          "position" : 869,
+          "strand" : "+"
+        },
+        "effect" : "Effect",
+        "reportedNumReads" : 8
+      } ],
+      "rnaSeqs" : [ ]
+    }
+  } ],
+  "carePlans" : [ {
+    "id" : "76762e3d-3823-42e4-a022-c55bd3dcb628",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "reason" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "type" : "MTBDiagnosis"
+    },
+    "issuedOn" : "2025-10-01"
+  }, {
+    "id" : "df8a1eab-cb00-4dce-b183-f9a560530b47",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "reason" : {
+      "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+      "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+      "type" : "MTBDiagnosis"
+    },
+    "issuedOn" : "2025-10-15",
+    "geneticCounselingRecommendation" : {
+      "id" : "58d75cf7-b078-47ba-8c83-97250faf5530",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "issuedOn" : "2025-10-15",
+      "reason" : {
+        "code" : "other",
+        "display" : "Andere",
+        "system" : "dnpm-dip/mtb/recommendation/genetic-counseling/reason"
+      }
+    },
+    "medicationRecommendations" : [ {
+      "id" : "0eddcc33-36b7-4f0b-ae05-3b09edaed0e7",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "issuedOn" : "2025-10-15",
+      "priority" : {
+        "code" : "4",
+        "display" : "4",
+        "system" : "dnpm-dip/recommendation/priority"
+      },
+      "levelOfEvidence" : {
+        "grading" : {
+          "code" : "m2C",
+          "display" : "m2C",
+          "system" : "dnpm-dip/mtb/level-of-evidence/grading"
+        },
+        "addendums" : [ {
+          "code" : "R",
+          "display" : "R",
+          "system" : "dnpm-dip/mtb/level-of-evidence/addendum"
+        } ],
+        "publications" : [ {
+          "id" : "1461817646",
+          "system" : "https://pubmed.ncbi.nlm.nih.gov",
+          "type" : "Publication"
+        } ]
+      },
+      "category" : [ {
+        "code" : "SO",
+        "display" : "Sonstiges",
+        "system" : "dnpm-dip/mtb/recommendation/systemic-therapy/category"
+      } ],
+      "medication" : [ {
+        "code" : "L01EX14",
+        "display" : "Entrectinib",
+        "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+        "version" : "2025"
+      } ],
+      "useType" : {
+        "code" : "unknown",
+        "display" : "Unknown",
+        "system" : "dnpm-dip/mtb/recommendation/systemic-therapy/use-type"
+      },
+      "supportingVariants" : [ {
+        "variant" : {
+          "id" : "cd38de25-9fcb-455c-9d97-5eb1fab58d20",
+          "type" : "Variant"
+        },
+        "gene" : {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        },
+        "display" : "ABCA3 Some(Low-level-gain)"
+      } ]
+    }, {
+      "id" : "7c950564-6f5e-4098-8b81-635471de34d8",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "issuedOn" : "2025-10-15",
+      "priority" : {
+        "code" : "1",
+        "display" : "1",
+        "system" : "dnpm-dip/recommendation/priority"
+      },
+      "levelOfEvidence" : {
+        "grading" : {
+          "code" : "m3",
+          "display" : "m3",
+          "system" : "dnpm-dip/mtb/level-of-evidence/grading"
+        },
+        "addendums" : [ {
+          "code" : "R",
+          "display" : "R",
+          "system" : "dnpm-dip/mtb/level-of-evidence/addendum"
+        } ],
+        "publications" : [ {
+          "id" : "781601848",
+          "system" : "https://pubmed.ncbi.nlm.nih.gov",
+          "type" : "Publication"
+        } ]
+      },
+      "category" : [ {
+        "code" : "IM",
+        "display" : "Immun-/Antikörpertherapie",
+        "system" : "dnpm-dip/mtb/recommendation/systemic-therapy/category"
+      } ],
+      "medication" : [ {
+        "code" : "L01EX14",
+        "display" : "Entrectinib",
+        "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+        "version" : "2025"
+      } ],
+      "useType" : {
+        "code" : "compassionate",
+        "display" : "Compassionate Use",
+        "system" : "dnpm-dip/mtb/recommendation/systemic-therapy/use-type"
+      },
+      "supportingVariants" : [ {
+        "variant" : {
+          "id" : "71e38a9b-0639-420e-9163-5827b5ee144b",
+          "type" : "Variant"
+        },
+        "gene" : {
+          "code" : "HGNC:21597",
+          "display" : "ACAD10",
+          "system" : "https://www.genenames.org/"
+        },
+        "display" : "ACAD10 Some(p.Arg78_Gly79insX[23])"
+      } ]
+    } ],
+    "procedureRecommendations" : [ {
+      "id" : "ac4a57f4-8882-4313-902c-a1a1a2cf090a",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "issuedOn" : "2025-10-15",
+      "priority" : {
+        "code" : "2",
+        "display" : "2",
+        "system" : "dnpm-dip/recommendation/priority"
+      },
+      "levelOfEvidence" : {
+        "grading" : {
+          "code" : "m2B",
+          "display" : "m2B",
+          "system" : "dnpm-dip/mtb/level-of-evidence/grading"
+        },
+        "addendums" : [ {
+          "code" : "iv",
+          "display" : "iv",
+          "system" : "dnpm-dip/mtb/level-of-evidence/addendum"
+        } ],
+        "publications" : [ {
+          "id" : "371055341",
+          "system" : "https://pubmed.ncbi.nlm.nih.gov",
+          "type" : "Publication"
+        } ]
+      },
+      "code" : {
+        "code" : "OP",
+        "display" : "Operation",
+        "system" : "dnpm-dip/mtb/recommendation/procedure/category"
+      },
+      "supportingVariants" : [ {
+        "variant" : {
+          "id" : "497308e0-f31f-4d5f-ab19-6c5a5d46256f",
+          "type" : "Variant"
+        },
+        "gene" : {
+          "code" : "HGNC:6973",
+          "display" : "MDM2",
+          "system" : "https://www.genenames.org/"
+        },
+        "display" : "MDM2 Some(High-level-gain)"
+      } ]
+    } ],
+    "studyEnrollmentRecommendations" : [ {
+      "id" : "20917451-d023-423e-af6c-79acbffb392c",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "issuedOn" : "2025-10-15",
+      "levelOfEvidence" : {
+        "grading" : {
+          "code" : "m2C",
+          "display" : "m2C",
+          "system" : "dnpm-dip/mtb/level-of-evidence/grading"
+        },
+        "addendums" : [ {
+          "code" : "R",
+          "display" : "R",
+          "system" : "dnpm-dip/mtb/level-of-evidence/addendum"
+        } ],
+        "publications" : [ {
+          "id" : "1461817646",
+          "system" : "https://pubmed.ncbi.nlm.nih.gov",
+          "type" : "Publication"
+        } ]
+      },
+      "priority" : {
+        "code" : "2",
+        "display" : "2",
+        "system" : "dnpm-dip/recommendation/priority"
+      },
+      "study" : [ {
+        "id" : "DRKS00030177",
+        "system" : "DRKS",
+        "type" : "Study"
+      } ],
+      "supportingVariants" : [ {
+        "variant" : {
+          "id" : "cd38de25-9fcb-455c-9d97-5eb1fab58d20",
+          "type" : "Variant"
+        },
+        "gene" : {
+          "code" : "HGNC:33",
+          "display" : "ABCA3",
+          "system" : "https://www.genenames.org/"
+        },
+        "display" : "ABCA3 Some(Low-level-gain)"
+      } ]
+    } ],
+    "histologyReevaluationRequests" : [ {
+      "id" : "863f1d17-09e1-41ac-9fc8-50fe9bdafa2e",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "specimen" : {
+        "id" : "749cc4e2-03cc-4112-a49a-5c586efc0a8f",
+        "type" : "TumorSpecimen"
+      },
+      "issuedOn" : "2025-10-15"
+    } ],
+    "rebiopsyRequests" : [ {
+      "id" : "48d3cc31-59c9-4a4b-a616-435593925dff",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "tumorEntity" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "type" : "MTBDiagnosis"
+      },
+      "issuedOn" : "2025-10-15"
+    } ],
+    "notes" : [ "Protocol of the MTB conference..." ]
+  } ],
+  "followUps" : [ {
+    "date" : "2009-12-26",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "lastContactDate" : "2009-12-26"
+  } ],
+  "claims" : [ {
+    "id" : "031545d3-c7d7-4ff7-a213-b434f4b7851e",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "recommendation" : {
+      "id" : "0eddcc33-36b7-4f0b-ae05-3b09edaed0e7",
+      "type" : "MTBMedicationRecommendation"
+    },
+    "issuedOn" : "2025-10-15",
+    "stage" : {
+      "code" : "initial-claim",
+      "display" : "Erstantrag",
+      "system" : "dnpm-dip/mtb/claim/stage"
+    }
+  }, {
+    "id" : "5c6355c2-d3ad-4c27-b67c-fb1219adff8d",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "recommendation" : {
+      "id" : "7c950564-6f5e-4098-8b81-635471de34d8",
+      "type" : "MTBMedicationRecommendation"
+    },
+    "issuedOn" : "2025-10-15",
+    "stage" : {
+      "code" : "revocation",
+      "display" : "Widerspruch",
+      "system" : "dnpm-dip/mtb/claim/stage"
+    }
+  } ],
+  "claimResponses" : [ {
+    "id" : "6d881d9c-e337-4985-ab51-ecf5bd7249d3",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "claim" : {
+      "id" : "031545d3-c7d7-4ff7-a213-b434f4b7851e",
+      "type" : "Claim"
+    },
+    "issuedOn" : "2025-10-15",
+    "status" : {
+      "code" : "accepted",
+      "display" : "Angenommen",
+      "system" : "dnpm-dip/mtb/claim-response/status"
+    }
+  }, {
+    "id" : "770130da-d158-412c-8c4f-94e6a21d263d",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "claim" : {
+      "id" : "5c6355c2-d3ad-4c27-b67c-fb1219adff8d",
+      "type" : "Claim"
+    },
+    "issuedOn" : "2025-10-15",
+    "status" : {
+      "code" : "unknown",
+      "display" : "Unbekannt",
+      "system" : "dnpm-dip/mtb/claim-response/status"
+    }
+  } ],
+  "systemicTherapies" : [ {
+    "history" : [ {
+      "id" : "9f81e98e-337d-4dcf-b5bd-e3efc35b5375",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "intent" : {
+        "code" : "S",
+        "display" : "Sonstiges",
+        "system" : "dnpm-dip/therapy/intent"
+      },
+      "category" : {
+        "code" : "O",
+        "display" : "Ohne Bezug zur operativen Therapie",
+        "system" : "dnpm-dip/therapy/category"
+      },
+      "basedOn" : {
+        "id" : "0eddcc33-36b7-4f0b-ae05-3b09edaed0e7",
+        "type" : "MTBMedicationRecommendation"
+      },
+      "recordedOn" : "2025-10-15",
+      "status" : {
+        "code" : "on-going",
+        "display" : "Laufend",
+        "system" : "dnpm-dip/therapy/status"
+      },
+      "recommendationFulfillmentStatus" : {
+        "code" : "partial",
+        "display" : "Partiell",
+        "system" : "dnpm-dip/therapy/recommendation-fulfillment-status"
+      },
+      "dosage" : {
+        "code" : "over-50%",
+        "display" : ">= 50 %",
+        "system" : "dnpm-dip/therapy/dosage-density"
+      },
+      "period" : {
+        "start" : "2009-10-17",
+        "end" : "2010-02-13"
+      },
+      "medication" : [ {
+        "code" : "L01EX14",
+        "display" : "Entrectinib",
+        "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+        "version" : "2025"
+      } ],
+      "notes" : [ "Notes on the therapy..." ]
+    } ]
+  }, {
+    "history" : [ {
+      "id" : "2547ce0b-d408-4434-9a04-0fbfb288662c",
+      "patient" : {
+        "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+        "type" : "Patient"
+      },
+      "reason" : {
+        "id" : "b105c6da-d4cf-4aaf-bc44-6a59090419d4",
+        "display" : "Bösartige Neubildung: Laterale Harnblasenwand",
+        "type" : "MTBDiagnosis"
+      },
+      "intent" : {
+        "code" : "X",
+        "display" : "Keine Angabe",
+        "system" : "dnpm-dip/therapy/intent"
+      },
+      "category" : {
+        "code" : "N",
+        "display" : "Neoadjuvant",
+        "system" : "dnpm-dip/therapy/category"
+      },
+      "basedOn" : {
+        "id" : "7c950564-6f5e-4098-8b81-635471de34d8",
+        "type" : "MTBMedicationRecommendation"
+      },
+      "recordedOn" : "2025-10-15",
+      "status" : {
+        "code" : "on-going",
+        "display" : "Laufend",
+        "system" : "dnpm-dip/therapy/status"
+      },
+      "recommendationFulfillmentStatus" : {
+        "code" : "complete",
+        "display" : "Komplett",
+        "system" : "dnpm-dip/therapy/recommendation-fulfillment-status"
+      },
+      "dosage" : {
+        "code" : "under-50%",
+        "display" : "< 50 %",
+        "system" : "dnpm-dip/therapy/dosage-density"
+      },
+      "period" : {
+        "start" : "2009-09-26",
+        "end" : "2010-02-13"
+      },
+      "medication" : [ {
+        "code" : "L01EX14",
+        "display" : "Entrectinib",
+        "system" : "http://fhir.de/CodeSystem/bfarm/atc",
+        "version" : "2025"
+      } ],
+      "notes" : [ "Notes on the therapy..." ]
+    } ]
+  } ],
+  "responses" : [ {
+    "id" : "e2b8d4d2-270e-4137-9f1e-f458c35cbb99",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "therapy" : {
+      "id" : "9f81e98e-337d-4dcf-b5bd-e3efc35b5375",
+      "type" : "MTBSystemicTherapy"
+    },
+    "effectiveDate" : "2009-12-26",
+    "method" : {
+      "code" : "RECIST",
+      "display" : "Nach RECIST-Kriterien",
+      "system" : "dnpm-dip/mtb/response/method"
+    },
+    "value" : {
+      "code" : "PR",
+      "display" : "Partial Response",
+      "system" : "RECIST"
+    }
+  }, {
+    "id" : "52c7990f-ad4a-4dd2-b5f6-d7d866afe265",
+    "patient" : {
+      "id" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+      "type" : "Patient"
+    },
+    "therapy" : {
+      "id" : "2547ce0b-d408-4434-9a04-0fbfb288662c",
+      "type" : "MTBSystemicTherapy"
+    },
+    "effectiveDate" : "2009-11-28",
+    "method" : {
+      "code" : "RECIST",
+      "display" : "Nach RECIST-Kriterien",
+      "system" : "dnpm-dip/mtb/response/method"
+    },
+    "value" : {
+      "code" : "MR",
+      "display" : "Mixed Response",
+      "system" : "RECIST"
+    }
+  } ],
+  "metadata" : {
+    "type" : "test",
+    "transferTAN" : "3AB5F7A29B8A9FDEE98CF3C5B0DE3E9EAA73E7714962833B7E67389BB9134CD9",
+    "modelProjectConsent" : {
+      "version" : "Patient Info TE Consent MVGenomSeq vers01",
+      "date" : "2025-09-16",
+      "provisions" : [ {
+        "date" : "2025-09-17",
+        "purpose" : "sequencing",
+        "type" : "permit"
+      }, {
+        "date" : "2025-09-17",
+        "purpose" : "reidentification",
+        "type" : "permit"
+      }, {
+        "date" : "2025-09-17",
+        "purpose" : "case-identification",
+        "type" : "permit"
+      } ]
+    },
+    "researchConsents" : [ {
+      "resourceType" : "Consent",
+      "id" : "example-C-RES-19832728",
+      "status" : "active",
+      "dateTime" : "2025-03-20",
+      "presentationDate" : "2025-03-20",
+      "meta" : {
+        "lastUpdated" : "2025-07-09T09:50:46.037+01:00",
+        "profile" : [ "https://www.medizininformatik-initiative.de/fhir/modul-consent/StructureDefinition/mii-pr-consent-einwilligung" ]
+      },
+      "extension" : [ {
+        "url" : "http://fhir.de/ConsentManagement/StructureDefinition/DomainReference",
+        "extension" : [ {
+          "url" : "domain",
+          "valueReference" : {
+            "reference" : "ResearchStudy/c946ae17-e3e6-4178-b5ea-15f95aaeeeb4"
+          }
+        }, {
+          "url" : "status",
+          "valueCoding" : {
+            "system" : "http://hl7.org/fhir/publication-status"
+          }
+        } ]
+      } ],
+      "scope" : {
+        "coding" : [ {
+          "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+          "code" : "research"
+        } ]
+      },
+      "category" : [ {
+        "coding" : [ {
+          "system" : "http://loinc.org",
+          "code" : "57016-8"
+        } ]
+      }, {
+        "coding" : [ {
+          "system" : "http://fhir.de/ConsentMa…nt/CodeSystem/ResultType",
+          "code" : "consent-status"
+        } ]
+      }, {
+        "coding" : [ {
+          "system" : "https://www.medizininfor…consent-consent_category",
+          "code" : "2.16.840.1.113883.3.1937.777.24.2.184"
+        } ]
+      } ],
+      "patient" : {
+        "reference" : "Patient/example",
+        "display" : "example"
+      },
+      "organization" : [ {
+        "display" : "MII"
+      } ],
+      "policy" : [ {
+        "uri" : "2.16.840.1.113883.3.1937.777.24.2.184"
+      } ],
+      "provision" : {
+        "period" : {
+          "start" : "2025-03-20",
+          "end" : "2055-03-20"
+        },
+        "provision" : [ {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Patientendaten erheben, speichern, nutzen",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.1"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "MDAT speichern, verarbeiten",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.7"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "MDAT wissenschaftlich nutzen EU DSGVO NIVEAU",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.8"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Krankenkassendaten retrospektiv uebertragen, speichern, nutzen",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.10"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Krankenkassendaten prospektiv uebertragen, speichern, nutzen",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.14"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Biomaterial erheben, lagern, nutzen",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.18"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Biomaterial Zusatzentnahme",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.24"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Rekontaktierung Ergänzungen",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.26"
+            } ]
+          } ]
+        }, {
+          "type" : "permit",
+          "period" : {
+            "start" : "2025-03-20",
+            "end" : "2030-03-20"
+          },
+          "code" : [ {
+            "coding" : [ {
+              "system" : "urn:oid:2.16.840.1.113883.3.1937.777.24.5.3",
+              "display" : "Rekontaktierung Zusatzbefund",
+              "code" : "2.16.840.1.113883.3.1937.777.24.5.3.30"
+            } ]
+          } ]
+        } ]
+      }
+    } ]
+  },
+  "submittedAt" : "2025-10-20T10:57:54.703526438"
+}

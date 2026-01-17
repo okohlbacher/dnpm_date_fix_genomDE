@@ -1,0 +1,20 @@
+{
+  "id" : "2AB5F7A29B8A9FDEE98CF3C5B0DE3E9EAA73E7714962833B7E67389BB9134CD9",
+  "createdAt" : "2025-10-15T13:46:24.287780933",
+  "patient" : "aa6af988-da69-4cfd-9ea1-5983328fb8aa",
+  "status" : "unsubmitted",
+  "site" : {
+    "code" : "UKx",
+    "display" : "Musterlingen",
+    "system" : "dnpm-dip/site"
+  },
+  "useCase" : "MTB",
+  "type" : "test",
+  "sequencingType" : "genome-short-read",
+  "healthInsuranceType" : "GKV",
+  "consentStatus" : {
+    "mv-consent" : true,
+    "research-consent" : false
+  },
+  "reasonResearchConsentMissing" : "technical-issues"
+}
