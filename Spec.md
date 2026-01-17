@@ -1,5 +1,7 @@
 # DNPM submission data fix-up tool
 
+> **Note:** This is a functional specification designed to be used with Claude Code for automated code generation and maintenance.
+
 ## Overview
 
 A Python CLI tool for correcting submission dates in DNPM patient record and submission report JSON files.
